@@ -1,0 +1,17 @@
+
+#connectMetamask:hover {
+    background-color: gray;
+}
+
+#depositTokens:hover {
+    background-color: black;
+}
+
+/* Styles for the tokens cards */
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
