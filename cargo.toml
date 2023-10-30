@@ -1,0 +1,31 @@
+[package]
+name = 'mylendingprotocol'
+version = "5.0.0"
+authors = ["Sutan"]
+edition = "2021"
+
+
+
+[dependencies]
+
+ink_lang = { git = "https://github.com/paritytech/ink", branch = "master" }
+ink_storage= { git = "https://github.com/paritytech/ink", branch = "master " }
+ink_env = { git = "https://github.com/paritytech/ink", branch = "master" }
+
+
+
+
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2.6", default-features = false, features = ["derive"], optional = true }
+
+[lib]
+path = "/workspaces/myprotocol/contracts/mylendingprotcol /src/lib.rs"
+
+[features]
+default = ["std"]
+std = [
+    "ink_lang/std", # Changed from "ink/std" to "ink_lang/std"
+    "scale/std",
+    "scale-info/std",
+]
+
